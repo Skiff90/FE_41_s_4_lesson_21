@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Our blog",
   "scripts": {
-    "start":"parcel index.html --open --cache-dir .cache",
+    "start":"parcel index.html --open",
     "build":"parcel build index.html",
     "serve":"json-server --watch db.json --port 3000"
   },
