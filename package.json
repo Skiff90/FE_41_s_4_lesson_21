@@ -2,8 +2,11 @@
   "name": "fe_41_s_4_lesson_21_blog",
   "version": "1.0.0",
   "description": "Our blog",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "rm -rf dist .parcel-cache && parcel index.html",
+    "build": "parcel build index.html",
+    "json-server": "json-server --watch db.json --port 3000"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,18 @@
     "json-server": "^1.0.0-beta.1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
-  }
+    "buffer": "^6.0.3",
+    "parcel": "^2.0.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-transformer-hbs": "^1.0.0"
+  },
+  "targets": {
+    "default": {
+      "publicUrl": "./",
+      "distDir": "dist"
+    }
+  },
+  "resolvers": [
+    "parcel-transformer-hbs"
+  ]
 }
